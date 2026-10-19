@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHAHYAAN.EXE | Birthday Protocol</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-theme="dark">
+  <div class="background-grid"></div>
+  <div class="scanlines"></div>
+  <canvas id="confetti"></canvas>
+
+  <header class="topbar">
+    <div class="brand"><span>◆</span> SHAHYAAN.EXE</div>
+    <div class="top-actions">
+      <span class="status">● SYSTEM ONLINE</span>
+      <button id="soundBtn" class="icon-btn" aria-label="Toggle sound">♫ ON</button>
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">☀</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="eyebrow">CLASSIFIED // BIRTHDAY PROTOCOL 21.0</div>
+
+    <!-- PHASE 1 -->
+    <section id="login" class="screen active">
+      <div class="terminal card">
+        <div class="terminal-bar">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <span>birthday_authentication.exe</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line">[BOOT] Initializing birthday protocol...</p>
+          <p class="terminal-line">[SCAN] Identity: SHAHYAAN SHAKEEL QURESHI</p>
+          <p class="terminal-line">[INFO] Legendary status detected.</p>
+          <p class="terminal-line warning">[LOCKED] Authentication required.</p>
+
+          <h1>IDENTITY <span>VERIFICATION</span></h1>
+          <p>Only the birthday legend may proceed.</p>
+
+          <form id="loginForm">
+            <label for="password">What year was the legend born?</label>
+            <div class="input-row">
+              <input id="password" type="text" inputmode="numeric"
+                maxlength="4" placeholder="YYYY" autocomplete="off" required>
+              <button type="submit" class="primary-btn">UNLOCK →</button>
+            </div>
+          </form>
+          <p id="loginError" class="feedback" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHASE 2 -->
+    <section id="quiz" class="screen">
+      <div class="card content-card">
+        <div class="phase">PHASE 02 / BIRTHDAY INTELLIGENCE TEST</div>
+        <h2>PROVE YOUR <span>LEGEND STATUS</span></h2>
+        <p>Three very serious questions. Absolutely no scientific credibility.</p>
+        <div class="progress"><div id="quizProgress"></div></div>
+        <p id="questionCount" class="small"></p>
+        <h3 id="questionText"></h3>
+        <div id="answers" class="answer-grid"></div>
+        <p id="quizFeedback" class="feedback" aria-live="polite"></p>
+        <button id="nextQuestion" class="primary-btn hidden">NEXT CHALLENGE →</button>
+      </div>
+    </section>
+
+    <!-- PHASE 3 -->
+    <section id="achievements" class="screen">
+      <div class="card content-card center">
+        <div class="phase">PHASE 03 / ACHIEVEMENTS UNLOCKED</div>
+        <h2>LEGENDARY <span>BROTHER</span></h2>
+        <p>Our highly questionable AI has analyzed your existence.</p>
+        <div class="achievement-grid">
+          <div class="achievement"><b>🏆</b><strong>LEVEL 21</strong><small>21 years of chaos</small></div>
+          <div class="achievement"><b>🎮</b><strong>LEGENDARY BRO</strong><small>Rare family achievement</small></div>
+          <div class="achievement"><b>😂</b><strong>CHAOS MASTER</strong><small>Certified troublemaker</small></div>
+          <div class="achievement"><b>👑</b><strong>QURESHI VIP</strong><small>Lifetime membership</small></div>
+        </div>
+        <button id="toGallery" class="primary-btn">ACCESS MEMORY ARCHIVE →</button>
+      </div>
+    </section>
+
+    <!-- PHASE 4 -->
+    <section id="gallery" class="screen">
+      <div class="card content-card center">
+        <div class="phase">PHASE 04 / BROTHERHOOD ARCHIVE</div>
+        <h2>MEMORY <span>DATABASE</span></h2>
+        <p>Some legendary memories deserve permanent storage.</p>
+        <div class="gallery-grid">
+          <div class="memory">
+            <div class="memory-image"><img src="photo/Memory 1.jpeg" alt="Brotherhood memory one"></div>
+            <h3>THE EARLY DAYS</h3><p>Before the chaos got professional.</p>
+          </div>
+          <div class="memory">
+            <div class="memory-image"><img src="photo/Memory 2.jpeg" alt="Brotherhood memory two"></div>
+            <h3>PARTNERS IN CRIME</h3><p>Our shared brain cell was working overtime.</p>
+          </div>
+          <div class="memory">
+            <div class="memory-image"><img src="photo/Memory 3.jpeg" alt="Brotherhood memory three"></div>
+            <h3>STILL LEGENDARY</h3><p>More memories loading every year.</p>
+          </div>
+        </div>
+        <button id="toCake" class="primary-btn">INITIATE FINAL BIRTHDAY PROTOCOL →</button>
+      </div>
+    </section>
+
+    <!-- PHASE 5 -->
+    <section id="cake" class="screen">
+      <div class="card content-card center">
+        <div class="phase">PHASE 05 / THE FINAL CHALLENGE</div>
+        <h2>MAKE A <span>WISH</span></h2>
+        <p>Shahyaan, you've reached Level 21. Your final mission is to blow out every candle!</p>
+        <div class="cake-scene">
+          <div id="candles" class="candles"></div>
+          <div class="cake-top"></div>
+          <div class="cake-layer cake-upper">HAPPY BIRTHDAY</div>
+          <div class="cake-layer cake-lower">LEVEL 21</div>
+          <div class="cake-plate"></div>
+        </div>
+        <div class="candle-status">
+          <strong id="candleCount">21 / 21 candles burning</strong>
+          <div class="progress"><div id="candleProgress"></div></div>
+        </div>
+        <p id="micStatus" class="feedback" aria-live="polite">
+          Enable your microphone, then blow towards it!
+        </p>
+        <button id="micBtn" class="primary-btn">🎤 ENABLE MICROPHONE & BLOW</button>
+        <p class="small">Microphone required. Your audio stays on your device and is not uploaded.</p>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section id="final" class="screen">
+      <div class="card content-card center final-card">
+        <div class="phase">BIRTHDAY PROTOCOL SUCCESSFULLY EXECUTED</div>
+        <div class="big-emoji">🎉</div>
+        <h1>HAPPY 21ST BIRTHDAY<br><span>SHAHYAAN!</span></h1>
+        <p class="subtitle">Shahyaan Shakeel Qureshi</p>
+        <div class="message-box">
+          <p>🚨 SYSTEM ALERT: SHAHYAAN HAS REACHED LEVEL 21!</p>
+          <p>Congratulations, bro! You've survived 21 years on Earth without being uninstalled. An impressive achievement considering your questionable decisions. 💀</p>
+          <p>Your software is officially outdated, your warranty has expired, and the family has declined your return request.</p>
+          <p>New abilities unlocked: professional-level laziness, unlimited eating, and the extraordinary talent of annoying your brother.</p>
+          <p>But jokes aside, life wouldn't be nearly as entertaining without you. May Allah bless you with happiness, success, good health, and an amazing future.</p>
+          <p><strong>Happy Birthday, you absolute legend! ❤️</strong></p>
+          <p class="signature">— Your Brother</p>
+        </div>
+        <div class="error-text">ERROR 404: NORMAL BROTHER NOT FOUND</div>
+        <button id="replayConfetti" class="primary-btn">🎉 REPLAY CELEBRATION</button>
+      </div>
+    </section>
+  </main>
+  <footer>MADE WITH 💙 // BROTHERHOOD NEVER EXPIRES // © 2026</footer>
+</body>
+</html>
