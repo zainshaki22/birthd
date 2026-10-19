@@ -122,7 +122,7 @@ $("soundBtn").addEventListener("click", () => {
 $("loginForm").addEventListener("submit", (event) => {
   event.preventDefault();
 
-  if ($("password").value.trim() === "2005") {
+  if ($("password").value.trim() === "2006") {
     $("loginError").textContent = "ACCESS GRANTED. WELCOME, LEGEND.";
     successSound();
     setTimeout(() => {
